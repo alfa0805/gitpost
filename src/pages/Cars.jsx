@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 
 function Cars() {
     const [modal, setModal] = useState(false)
@@ -13,10 +13,7 @@ function Cars() {
       url:"https://realauto.limsa.uz/api/cars",
       method:"GET",
     }).then(data=>{
-        // console.log(res);
         console.log(data.data);
-        
-        // setCategories(data.data)
     })
   };
   const token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzFmY2NmNjUtZTIzOC00N2NmLWE3MWItYTUyNmJhZDcyYmEzIiwidG9rZW5fdHlwZSI6ImFjY2VzcyIsImlhdCI6MTczOTU0NTE5MSwiZXhwIjoxNzcxMDgxMTkxfQ.DJr8aIXip5vVm3gHIp38MG9l9XKh4jL60rVQDbp-HeQ"
