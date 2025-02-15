@@ -7,7 +7,7 @@ function Categories() {
       setModal(!modal)
       }
   const [categories, setCategories] = useState([]);
-  const imgUrl = "https://realauto.limsa.uz/api/uploads/images"
+  const imgUrl = "https://realauto.limsa.uz/api/uploads/images";
   const getcategory = () => {
     axios({
       url:"https://realauto.limsa.uz/api/categories",
