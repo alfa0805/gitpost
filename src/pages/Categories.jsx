@@ -17,11 +17,13 @@ function Categories() {
     })
   };
   const token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzFmY2NmNjUtZTIzOC00N2NmLWE3MWItYTUyNmJhZDcyYmEzIiwidG9rZW5fdHlwZSI6ImFjY2VzcyIsImlhdCI6MTczOTU0NTE5MSwiZXhwIjoxNzcxMDgxMTkxfQ.DJr8aIXip5vVm3gHIp38MG9l9XKh4jL60rVQDbp-HeQ"
-  const [name , setName] = useState("");
+  const [nameuz , setNameuz] = useState("");
+  const [nameru , setNameru] = useState("");
   const [image , setImage] = useState("");
   const post = () =>{
     const formData = new FormData();
-    formData.append("name_uz","name_ru" , name);
+    formData.append("name_en", nameuz);
+    formData.append("name_ru", nameru);
     formData.append("images",image)
     axios({
       url:"https://realauto.limsa.uz/api/categories",
@@ -74,7 +76,18 @@ function Categories() {
         id="username" 
         type="text" 
         placeholder="Username"
-        onChange={(e)=>setName(e?.target?.value)}
+        onChange={(e)=>setNameuz(e?.target?.value)}
+        />
+    </div>
+    <div className="mb-4">
+      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
+        name
+      </label>
+      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+        id="username" 
+        type="text" 
+        placeholder="Usernameru"
+        onChange={(e)=>setNameru(e?.target?.value)}
         />
     </div>
     <div className="flex items-center justify-between">

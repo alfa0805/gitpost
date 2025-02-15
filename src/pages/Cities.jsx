@@ -22,7 +22,7 @@ function Cities() {
   const post = () =>{
     const formData = new FormData();
     formData.append("name" , name);
-    formData.append("images",image)
+    formData.append("images" ,image)
     axios({
       url:"https://realauto.limsa.uz/api/cities",
       method:"POST",
