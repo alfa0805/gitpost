@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
-function cars() {
+function Cars() {
     const [modal, setModal] = useState(false)
     const menyu = () => {
       setModal(!modal)
@@ -16,28 +16,28 @@ function cars() {
         console.log(res.data);
     })
   };
-  // const token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzFmY2NmNjUtZTIzOC00N2NmLWE3MWItYTUyNmJhZDcyYmEzIiwidG9rZW5fdHlwZSI6ImFjY2VzcyIsImlhdCI6MTczOTU0NTE5MSwiZXhwIjoxNzcxMDgxMTkxfQ.DJr8aIXip5vVm3gHIp38MG9l9XKh4jL60rVQDbp-HeQ"
-  // const [name , setName] = useState("");
-  // const [image , setImage] = useState("");
-  // const post = () =>{
-  //   const formData = new FormData();
-  //   formData.append("name_uz" , name);
-  //   formData.append("images",image)
-  //   axios({
-  //     url:"https://realauto.limsa.uz/api/cars",
-  //     method:"POST",
-  //     headers:{
-  //       'Authorization':`Bearer ${token}`,
-  //       "Content-Type": "multipart/form-data",
-  //   },
-  //   data:formData,
-  //   }).then((res)=>{
-  //     console.log(res);
-  //   }).catch((err)=>{
-  //     console.log(err);
+  const token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzFmY2NmNjUtZTIzOC00N2NmLWE3MWItYTUyNmJhZDcyYmEzIiwidG9rZW5fdHlwZSI6ImFjY2VzcyIsImlhdCI6MTczOTU0NTE5MSwiZXhwIjoxNzcxMDgxMTkxfQ.DJr8aIXip5vVm3gHIp38MG9l9XKh4jL60rVQDbp-HeQ"
+  const [name , setName] = useState("");
+  const [image , setImage] = useState("");
+  const post = () =>{
+    const formData = new FormData();
+    formData.append("name_en" , name);
+    formData.append("images",image)
+    axios({
+      url:"https://realauto.limsa.uz/api/cars",
+      method:"POST",
+      headers:{
+        'Authorization':`Bearer ${token}`,
+        "Content-Type": "multipart/form-data",
+    },
+    data:formData,
+    }).then((res)=>{
+      console.log(res);
+    }).catch((err)=>{
+      console.log(err);
       
-  //   })
-  // }
+    })
+  }
   
   useEffect(()=>{
     getcategory();
@@ -110,4 +110,4 @@ function cars() {
   )
 }
 
-export default cars
+export default Cars

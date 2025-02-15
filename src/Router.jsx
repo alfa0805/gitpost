@@ -3,11 +3,10 @@ import App from "./App";
 import Home from "./pages/Home";
 import Categories from "./pages/Categories";
 import Brands from "./pages/Brands";
-
 import Cities from "./pages/Cities";
 import Locations from "./pages/Locations";
 import Models from "./pages/Models";
-import Cars from "./pages/cars";
+
 
 
 export const Router = createBrowserRouter([
