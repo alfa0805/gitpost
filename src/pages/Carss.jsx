@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
-function Cars() {
+function Carss() {
     const [modal, setModal] = useState(false)
     const menyu = () => {
       setModal(!modal)
@@ -110,4 +110,4 @@ function Cars() {
   )
 }
 
-export default Cars
+export default Carss

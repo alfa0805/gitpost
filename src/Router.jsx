@@ -6,7 +6,8 @@ import Brands from "./pages/Brands";
 import Cities from "./pages/Cities";
 import Locations from "./pages/Locations";
 import Models from "./pages/Models";
-import Cars from "./pages/cars";
+import Carss from "./pages/Carss";
+
 
 
 
@@ -29,7 +30,7 @@ export const Router = createBrowserRouter([
             },
             {
                 path:"/home/cars",
-                element:<Cars/>
+                element:<Carss/>
             },
             {
                 path:"/home/cities",
