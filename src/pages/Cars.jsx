@@ -12,8 +12,8 @@ function Cars() {
     axios({
       url:"https://realauto.limsa.uz/api/cars",
       method:"GET",
-    }).then(data=>{
-        console.log(data.data);
+    }).then(res=>{
+        console.log(res.data);
     })
   };
   const token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzFmY2NmNjUtZTIzOC00N2NmLWE3MWItYTUyNmJhZDcyYmEzIiwidG9rZW5fdHlwZSI6ImFjY2VzcyIsImlhdCI6MTczOTU0NTE5MSwiZXhwIjoxNzcxMDgxMTkxfQ.DJr8aIXip5vVm3gHIp38MG9l9XKh4jL60rVQDbp-HeQ"
