@@ -14,9 +14,9 @@ function Cars() {
       method:"GET",
     }).then(data=>{
         // console.log(res);
-        // console.log(data.data);
+        console.log(data.data);
         
-        setCategories(data.data)
+        // setCategories(data.data)
     })
   };
   const token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzFmY2NmNjUtZTIzOC00N2NmLWE3MWItYTUyNmJhZDcyYmEzIiwidG9rZW5fdHlwZSI6ImFjY2VzcyIsImlhdCI6MTczOTU0NTE5MSwiZXhwIjoxNzcxMDgxMTkxfQ.DJr8aIXip5vVm3gHIp38MG9l9XKh4jL60rVQDbp-HeQ"
