@@ -1,7 +1,10 @@
 @import "tailwindcss";
 
 body{
-    background-color: #1e2939;
+    /* background-color: #1e2939; */
+    background-image: url(./assets/bg1.jpg);
+    background-size:100%;
+    /* background-repeat: no-repeat; */
 }
 
 .nav-link {
@@ -36,3 +39,9 @@ body{
   right: 0;  /* Chapga harakat qiladi */
   width: 100%;
 }
+
+/* {
+  background-image: url(./assets/photo_2024-09-10_00-35-15.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
