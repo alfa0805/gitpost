@@ -24,7 +24,7 @@ function Brands() {
   const [image , setImage] = useState("");
   const post = () =>{
     const formData = new FormData();
-    formData.append("name", name);
+    formData.append("title", name);
     formData.append("images",image)
     axios({
       url:`${url}`,
@@ -38,7 +38,7 @@ function Brands() {
       console.log(res);
       toast.success("Muvaffaqiyatli qo'shildi")
       getcategory()
-      menyu(false)
+      malumot(false)
     }).catch((err)=>{
       console.log(err);
       toast.error("Xatolik yuz berdi")
@@ -118,10 +118,10 @@ function Brands() {
             key={category.id}>
                 <div className="w-[270x] h-[250px] rounded-md">
                   <img className="w-full h-full object-cover rounded-md"
-                      src={`${imgUrl}/${category.image_src}`} alt={category.name_en}
+                      src={`${imgUrl}/${category.image_src}`} alt={category.title}
                     />
                 </div>
-                <h2 className="text-white text-center text-xl font-medium py-3 hover:text-[#03e2ff]">{category.name_en}</h2>
+                <h2 className="text-white text-center text-xl font-medium py-3 hover:text-[#03e2ff]">{category.title}</h2>
                 <div 
                   className="flex items-center justify-between mx-auto rounded-xl px-5">
                   <button 

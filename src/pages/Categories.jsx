@@ -40,7 +40,7 @@ function Categories() {
       console.log(res);
       toast.success("Muvaffaqiyatli qo'shildi")
       getcategory()
-      menyu(false)
+      malumot(false)
     }).catch((err)=>{
       console.log(err);
       toast.error("Xatolik yuz berdi")
