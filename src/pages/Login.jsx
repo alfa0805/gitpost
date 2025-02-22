@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 function Login() {
     const token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzFmY2NmNjUtZTIzOC00N2NmLWE3MWItYTUyNmJhZDcyYmEzIiwidG9rZW5fdHlwZSI6ImFjY2VzcyIsImlhdCI6MTczOTU0NTE5MSwiZXhwIjoxNzcxMDgxMTkxfQ.DJr8aIXip5vVm3gHIp38MG9l9XKh4jL60rVQDbp-HeQ"
 
-
+    const [loading , setLoading] = useState(false)
     const [phone,setPhone] = useState('');
     const [password , setPassword] = useState('')
     const navigete = useNavigate()
@@ -15,6 +15,7 @@ function Login() {
         const formData = new FormData();
         formData.append('phone_number',phone)
         formData.append('password',password)
+        setLoading(true)
         axios({
             url:'https://realauto.limsa.uz/api/auth/signin',
             method:'POST',
@@ -22,15 +23,17 @@ function Login() {
         }).then(res=>{
            localStorage.setItem('accessToken',res?.data?.data?.tokenks?.accessToken?.token)
            toast.success("Muvaffaqiyatli o‘tildi")
-           navigete('/home') 
+           navigete('/home/categories') 
         }).catch(err=>{
             console.log(err);
             toast.error("Xatolik yuz berdi. Qayta urining")
-        })
+        }).finally(()=>{
+            setLoading(false)
+          })
     }
   return (
 <div className="">
-<div className="max-w-[1240px] h-[100vh] mx-auto flex justify-center items-center">
+  <div className="max-w-[1240px] h-[100vh] mx-auto flex justify-center items-center">
     <div className="w-[450px]">
         <form className="border-2 border-white shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4">
             <div className="mb-4">
@@ -60,8 +63,9 @@ function Login() {
                     className="text-xl text-white font-medium border border-white px-3 py-1 rounded-md hover:text-[#03e2ff] hover:border-[#03e2ff]" 
                     type="button" 
                     onClick={btn} 
+                    disabled={loading}
                     >
-                    Sign In
+                    {loading?"yuboriloqda":"yuborish"}
                 </button>
                 <button 
                     className="text-xl text-white font-medium border border-white px-3 py-1 rounded-md hover:text-[#03e2ff] hover:border-[#03e2ff]"
@@ -76,7 +80,7 @@ function Login() {
             &copy;2025 Mashgulot ro'yxatdan o'ting, siz bn Name_uz.
             </p>
     </div>
-</div>
+  </div>
 </div>
   )
 }

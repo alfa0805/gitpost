@@ -40,6 +40,10 @@ function Header() {
               className={({ isActive }) => (isActive ? "nav-link active-link" : "nav-link text-white")}>
               Models
             </NavLink>
+            {/* <NavLink to="/home/category"  
+              className={({ isActive }) => (isActive ? "nav-link active-link" : "nav-link text-white")}>
+              Category
+            </NavLink> */}
           </nav>
           <button 
             className="text-white text-2xl min-[500px]:hidden"

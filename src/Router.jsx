@@ -5,8 +5,10 @@ import Categories from "./pages/Categories";
 import Brands from "./pages/Brands";
 import Cities from "./pages/Cities";
 import Locations from "./pages/Locations";
-import Models from "./pages/Models";
+
 import Carss from "./pages/Carss";
+import Models from "./pages/Models";
+import Category from "./pages/Category";
 
 
 
@@ -43,7 +45,11 @@ export const Router = createBrowserRouter([
             {
                 path:"/home/models",
                 element:<Models/>
-            },
+            }
+            // {
+            //     path:"/home/category",
+            //     element:<Category/>
+            // }
         ]
     },
 ])

@@ -127,8 +127,8 @@ function Brands() {
                   <button 
                     className="text-md text-white font-medium border border-white px-5 py-1  rounded-xl hover:text-[#03e2ff] hover:border-[#03e2ff]"
                     onClick={() => (category.id)}
-                    >
-                      Edit
+                  >
+                    Edit
                   </button>
                   <button 
                     className="w-[80px] h-[35px] bg-red-600 hover:bg-red-700 text-amber-50 text-md font-bold rounded-xl"

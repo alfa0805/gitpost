@@ -2,8 +2,10 @@
 
 body{
     /* background-color: #1e2939; */
-    background-image: url(./assets/bg1.jpg);
+    background-image: url(./assets/bgblack.jpg);
     background-size:100%;
+    /* background: position top 10px; left: 10px; */
+    background-attachment: fixed;
     /* background-repeat: no-repeat; */
 }
 
